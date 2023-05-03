@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>紛争を開始</title>
+        <style>
+            html,
+            body {
+                margin: 0;
+                padding: auto;
+                height: 50vh;
+                font-family: Open Sans, Roboto, Arial, Helvetica, sans-serif, SimSun;
+                text-align: center;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 50%;
+            }
+            span {
+                vertical-align: middle;
+                box-sizing: border-box;
+                margin: auto;
+                border: 1px solid #999;
+                border-radius: 100vh;
+                padding: 5px;
+                width: 150px;
+                height: 32px;
+                font-size: 0.85em;
+                letter-spacing: 1.5px;
+                text-align: center;
+                text-indent: 1.5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="view">
+            <span id="text">紛争を開始</span>
+        </div>
+        <div id="editor">
+            <input type="text" name="text" id="text-input" value="紛争を開始" />
+        </div>
+        <script>
+            const text = document.getElementById('text');
+            document.getElementById('text-input').addEventListener('input', (e) => {
+                text.textContent = e.target.value;
+            });
+        </script>
+    </body>
+</html>
